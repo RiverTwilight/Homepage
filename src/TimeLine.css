@@ -1,4 +1,5 @@
 .box{
+    z-index: 1;
     margin:0 10%;
     height: 630px;
     overflow: visible;

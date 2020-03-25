@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import Header from './Ui/Header.jsx'
+import Dialog from './Ui/Dialog.jsx'
 import './TimeLine.css'
+import clickAnimate from './Ui/animate'
 
 const FirstPage = () => {
     return (
@@ -11,7 +13,7 @@ const FirstPage = () => {
                     YUNGEEKER
                 </h1>
                 <p>
-                    叩首问路，为梦而生<br></br>Since 2019.3
+                    Kowtow to ask for the way, born for the dream<br></br>Since 2019.3
                 </p>
             </header>
         </div>
@@ -26,7 +28,9 @@ const SecondPage = ({active}) => {
                     云极客工具YGKTOOL.CN
                 </h1>
                 <div className={`info-panel ${active?"info-panel-active":""}`}>
-                    极简，强大，高效，励志做最轻盈最好用的在线工具。<br></br>以工匠精神打造功能丰富的在线工具，无需下载即可免费使用
+                Simple, powerful, efficient and inspirational to be the lightest and best online tool.
+                <br></br>
+                Create rich online tools in the spirit of craftsmanship and use them free of charge without downloading
                     <center>
                         <a href="https://www.ygktool.cn" className="btn btn-block btn-circle">                       
                             <img
@@ -154,11 +158,17 @@ class Ui extends React.Component {
                 page: page
             })
         })
+        clickAnimate()        
     }
     render(){
         const { page } = this.state
         return(
             <>
+                <Dialog
+                    opened={true}
+                    title="A dialog"
+                    content="Just for test. For more information please go to my github"
+                />
                 <Header />
                 <FirstPage />
                 <SecondPage active={page === 2} />

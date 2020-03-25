@@ -45,14 +45,17 @@ class Header extends React.Component{
                             text:'YUNGEEKER',
                             href:'#header'
                         }, {
-                            text:'云极客工具',
+                            text:'Ygktool.cn',
                             href:'#ygktool'
                         }, {
-                            text:'追梦路上',
+                            text:'Dream',
                             href:'#history'
                         }, {
-                            text:'关于我',
+                            text:'About',
                             href:'#author'
+                        }, {
+                            text:'component',
+                            href:'#component'
                         }
                     ]}
                 />
